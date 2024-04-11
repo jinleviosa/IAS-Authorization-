@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>IAS Website</title>
+    <link rel="icon" href="images/logo.png">
+</head>
+<body>
+    <div class="header">
+        <nav>
+        <p class="head-title">Information Assurance and Security 1</p>
+        <ul>
+            <li>Jane Sombrito</li>
+            <li>BSIT 3-1</li>
+        </ul>
+
+        </nav>
+    </div>
+    <!------>
+    <div class="content">
+        <h1 class="h1-title">Home Activity #3</h1>
+        <p class="d1-p">Click the button below to download the file WITHOUT AUTHORIZATION:</p>
+        <button class="d1" onclick="downloadFile()">Download File without Authorization</button>
+        <p class="d2-p">Click the button below to download the file WITH AUTHORIZATION:</p>
+        <button type="button" class="d2" onclick="downloadFileAuthorized()">Download File with Authorization</button>
+    </div>
+
+    <script>
+        function downloadFile() {
+          var link = document.createElement('a');
+          link.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent('[InternetShortcut]\nURL=https://www.pup.edu.ph/\n');
+          link.download = 'https://www.pup.edu.url';
+          link.click();
+        }
+
+        function downloadFileAuthorized() {
+          window.location.href = 'auth.html';
+        }
+    </script>
+    
+
+</body>
+</html>
